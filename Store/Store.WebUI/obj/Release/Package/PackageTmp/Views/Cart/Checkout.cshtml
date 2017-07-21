@@ -1,0 +1,61 @@
+﻿@model Store.Domain.Entities.ShippingDetails
+
+@{
+    ViewBag.Title = "DrugStore: форма заказа";
+}
+
+<h2>Оформить заказ сейчас</h2>
+<p>Пожалуйста введите ваши контактные данные, и мы сразу отправим товар!</p>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <h3>Данные</h3>
+    <div class="form-group" style="height: 50px;">
+        @Html.LabelFor(n => n.Name, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(n => n.Name, new { @class = "form-control" })
+            @Html.ValidationMessageFor(n => n.Name, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <h3>Адрес доставки</h3>
+    <div class="form-group" style="height: 50px;">
+        @Html.LabelFor(c => c.City, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(c => c.City, new { @class = "form-control" })
+            @Html.ValidationMessageFor(c => c.City, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group" style="height: 50px;">
+        @Html.LabelFor(s => s.Street, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(s => s.Street, new { @class = "form-control" })
+            @Html.ValidationMessageFor(s => s.Street, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+
+    <div class="form-group" style="height: 50px;">
+        @Html.LabelFor(h => h.House, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(h => h.House, new { @class = "form-control" })
+            @Html.ValidationMessageFor(h => h.House, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group" style="height: 50px;">
+        @Html.LabelFor(f => f.Flat, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(f => f.Flat, new { @class = "form-control" })
+            @Html.ValidationMessageFor(f => f.Flat, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+
+    <div class="text-center">
+        <input class="btn btn-primary" type="submit" value="Обработать заказ" />
+    </div>
+}

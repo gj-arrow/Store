@@ -1,0 +1,26 @@
+﻿@using Store.WebUI.Models
+@using Store.WebUI.HtmlHelpers
+@model ProductsListViewModel
+@{
+    ViewBag.Title = "Товары";
+}
+
+<div class="sort">
+    <p style="margin-left:10px;margin-top: 4px;">Сортировать по :
+    Названию<a href="/@Model.CurrentCategory?sort=SortByNameUp"><img src="~/Images/arrowtop.png"/></a> <a class="marg-right" href="/@Model.CurrentCategory?sort=SortByNameDown"><img src="~/Images/arrowdown.png" /></a>
+    Цене<a href="/@Model.CurrentCategory?sort=SortByPriceUp"><img src="~/Images/arrowtop.png" /></a> <a class="marg-right" href="/@Model.CurrentCategory?sort=SortByPriceDown"><img src="~/Images/arrowdown.png" /></a>  
+    Категории <a href="/@Model.CurrentCategory?sort=SortByCategoryUp"><img src="~/Images/arrowtop.png"/></a>  <a  class="marg-right"href="/@Model.CurrentCategory?sort=SortByCategoryDown"><img src="~/Images/arrowdown.png" /></a>
+    </p>
+</div>
+@if (@Model.Products.Count() == 0)
+{<h2>
+    Товары с данной категорией отсутствуют.
+    </h2>}
+@foreach (var p in @Model.Products)
+{
+    @Html.Partial("ProductSummary", p)
+}
+
+<div class="btn-group pull-right pages">
+    @Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new { page = x, category = Model.CurrentCategory, sort = Model.CurrentSort }))
+</div>

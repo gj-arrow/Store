@@ -1,0 +1,13 @@
+﻿@model Store.WebUI.Models.SearchViewModel
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <h3>Поиск по сайту</h3>
+    <h4>@ViewBag.Error</h4>
+    @foreach (var p in @Model.Products)
+    {
+        @Html.Partial("ProductSummarySearch", p)
+    }
+

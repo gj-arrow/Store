@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="//ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/jquery-ui.min.js"></script>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/ErrorStyles.css" rel="stylesheet"/>
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+    @*@section Scripts {
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/jqueryval")
+    }*@
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <div class="navbar navbar-inverse" role="navigation"> 
+        @Html.AntiForgeryToken()
+        @Html.ActionLink(" ", "List", "Product", null, new { @class = "navbar-brand image" })
+        @Html.Partial("_LoginPartial")
+        @if (User.IsInRole("user") || User.IsInRole("admin"))
+        {
+              @Html.Action("Summary", "Cart")
+        }
+        else
+        {
+            <h4 id="blink7">Для совершения покупок необходимо авторизоваться!</h4>
+        }
+
+    </div>
+    @if (TempData["message"] != null)
+    {
+        <div class="alert alert-success my-alert">@TempData["message"]</div>
+    }
+    @if (TempData["Admin"] != null)
+    {
+        <div class="alert alert-warning my-alert">@TempData["Admin"]</div>
+    }
+
+    <div class="row panel">
+        <div class="col-md-2 navbar-margin" style="height:850px" >
+@using (Html.BeginForm("Search", "Product", FormMethod.Post, new { enctype = "multipart/form-data", @class = "search ui-widget" }))
+
+{           <input type="search" name="searchstring" placeholder="поиск" class="input" />
+            <input type="submit"  name="searchstring" value="" class="submit" />
+}
+            <div id="categories" class="well">
+                @Html.Action("Menu", "Nav")
+            </div>
+        </div>
+        <div class="col-xs-9 size79percent">
+            @RenderBody()
+        </div>
+    </div>
+
+    <div class="container body-content">
+
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year</p>
+        </footer>
+    </div>
+
+ 
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/jquery.validate.js"></script>
+    <script src="/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+</body>
+</html>
+@RenderSection("scripts", required: false)

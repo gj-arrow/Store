@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestSettings name="TestSettings1" id="f4fb6ec3-e717-4d1a-a78d-b7ca65a9cf95" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Description>These are default test settings for a local test run.</Description>
+  <Deployment enabled="false" />
+  <Execution>
+    <TestTypeSpecific>
+      <UnitTestRunConfig testTypeId="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b">
+        <AssemblyResolution applicationBaseDirectory="%IIS_DRIVE%\Student\sem\6 сем\web-application">
+          <TestDirectory useLoadContext="true" />
+          <RuntimeResolution>
+            <Directory path="%IIS_DRIVE%\Student\sem\6 сем\web-application\Store\UnitTest" includeSubDirectories="true" />
+            <Directory path="%IIS_DRIVE%\Student\sem\6 сем\web-application\Store\Store.Domain" includeSubDirectories="true" />
+          </RuntimeResolution>
+        </AssemblyResolution>
+      </UnitTestRunConfig>
+    </TestTypeSpecific>
+    <AgentRule name="Execution Agents">
+    </AgentRule>
+  </Execution>
+  <Properties />
+</TestSettings>

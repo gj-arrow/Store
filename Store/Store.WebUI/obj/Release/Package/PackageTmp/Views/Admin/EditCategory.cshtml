@@ -1,0 +1,39 @@
+﻿@model Store.Domain.Entities.Category
+
+@{
+    ViewBag.Title = "Админ панель: редактирование категории";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <div class="panel-heading">
+        <h3>Редактирование категории</h3>
+    </div>
+
+    @using (Html.BeginForm("EditCategory", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary()
+
+
+        <div class="panel-body edit">
+            <div class="form-group" style="height: 50px;">
+                @Html.LabelFor(c => c.Type, new { @class = "control-label" })
+                <div>
+                    @Html.TextBoxFor(c => c.Type, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(c => c.Type, "", new { @class = "text-danger" })
+                </div>
+                @Html.HiddenFor(i => i.CategoryId)
+            </div>
+            <br>
+            <div>
+                <input type="submit" value="Сохранить" class="btn btn-primary" />
+                @Html.ActionLink("Отменить изменения и вернуться к списку", "ListCategory", null, new
+       {
+           @class = "btn btn-default"
+       })
+            </div>
+        </div>
+        
+    }
+</div>

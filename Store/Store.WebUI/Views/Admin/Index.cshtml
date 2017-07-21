@@ -1,0 +1,70 @@
+﻿@*@model IEnumerable<Store.Domain.Entities.Product>*@
+@using Store.WebUI.Models
+@using Store.WebUI.HtmlHelpers
+@model ProductsListViewModel
+@{
+    ViewBag.Title = "Админ панель: список товаров";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="../../Scripts/Script.js"></script>
+<script type="text/javascript" src="../../Scripts/jquery.confirm.js"></script>
+<link rel="stylesheet" type="text/css" href="../../Content/jquery_confirm.css" />
+
+<div class="sort" style="width: 100%;">
+    <p style="margin-left:10px;margin-top: 4px;">
+        Сортировать по :
+        Названию<a href="/Admin/Index?sort=SortByNameUp&page=1"><img src="~/Images/arrowtop.png" /></a> <a class="marg-right" href="/Admin/Index?sort=SortByNameDown&page=1"><img src="~/Images/arrowdown.png" /></a>
+        Цене<a href="/Admin/Index?sort=SortByPriceUp&page=1"><img src="~/Images/arrowtop.png" /></a> <a class="marg-right" href="/Admin/Index?sort=SortByPriceDown&page=1"><img src="~/Images/arrowdown.png" /></a>
+        Категории <a href="/Admin/Index?sort=SortByCategoryUp&page=1"><img src="~/Images/arrowtop.png" /></a>  <a class="marg-right" href="/Admin/Index?sort=SortByCategoryDown&page=1"><img src="~/Images/arrowdown.png" /></a>
+    </p>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3>Список товаров</h3>
+    </div>
+    <div class="panel-body">
+
+        <table class="table table-striped table-condensed table-bordered">
+            <tr>
+                <th>Название</th>
+                <th class="text-right" style="width:250px">Категория</th>
+                <th class="text-right">Цена</th>
+                <th class="text-center">Действия</th>
+            </tr>
+            @foreach (var item in @Model.Products)
+            {
+                <tr>                 
+                    <td>@Html.ActionLink(item.Name, "ViewProduct","Product", new { item.ProductId }, null)</td>
+                    <td class="text-right">@item.Category.Type</td>
+                    <td class="text-right">@item.Price.ToString() руб</td>
+                    <td class="text-center item">
+                        <div style="float:left">
+                            @Html.ActionLink("Изменить", "Edit", new { item.ProductId },
+                        new { @class = "btn btn-default btn-xs" })
+                         </div>
+
+                        <div>
+                            <p class="delete btn btn-default btn-xs" onclick="delProduct(@item.ProductId)">Удалить</p>  
+                        </div>
+                        
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="panel-footer">
+        <div style="float:left; margin-right:10px">
+        @Html.ActionLink("Добавить товар", "Create", null,
+            new { @class = "btn btn-default" })
+            </div>
+
+       <div>
+           @Html.ActionLink("Список категорий", "ListCategory", null,
+            new { @class = "btn btn-default" })
+       </div>
+        <div class="btn-group pull-right" style="margin-top: -34px;">
+            @Html.PageLinks(Model.PagingInfo, x => Url.Action("Index", new { page = x, category = Model.CurrentCategory, sort = Model.CurrentSort }))
+        </div>
+    </div>
+</div>

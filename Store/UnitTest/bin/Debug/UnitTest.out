@@ -1,0 +1,41 @@
+Microsoft (R) Test Execution Command Line Tool Version 14.0.23107.0
+Copyright (c) Microsoft Corporation. All rights reserved.
+    
+Loading D:\Student\sem\6 ᥬ\web-application\Store\TestSettings1.testsettings...
+Loading D:\Student\sem\6 ᥬ\web-application\Store\UnitTest\bin\Debug\UnitTest.dll...
+The configured application base directory 'd:\student\sem\6 ᥬ\web-application\store\%IIS_DRIVE%\Student\sem\6 ᥬ\web-application' does not exist.  The test directory will be used instead.
+Starting execution...
+
+Results               Top Level Tests
+-------               ---------------
+Passed                UnitTest.AdminTests.CreateCategory1
+Passed                UnitTest.AdminTests.CreateCategory2
+Passed                UnitTest.AdminTests.CreateCategory3
+Passed                UnitTest.AdminTests.DeleteCategory1
+Passed                UnitTest.AdminTests.DeleteCategory2
+Passed                UnitTest.AdminTests.DeleteCategory3
+Passed                UnitTest.AdminTests.Edit1
+Passed                UnitTest.AdminTests.Edit2
+Passed                UnitTest.AdminTests.Edit3
+Passed                UnitTest.AdminTests.Edit4
+Passed                UnitTest.AdminTests.Edit5
+Passed                UnitTest.AdminTests.List1
+Passed                UnitTest.AdminTests.List2
+Passed                UnitTest.AdminTests.List3
+Passed                UnitTest.CartTests.Add_To_Cart
+Passed                UnitTest.CartTests.Add_To_Cart2
+16/16 test(s) Passed
+
+Summary
+-------
+Test Run Warning.
+  Passed  16
+  ----------
+  Total   16
+Results file:  D:\Student\sem\6 ᥬ\web-application\Store\UnitTest\bin\Debug\UnitTest.trx
+Test Settings: TestSettings1
+
+Run has the following issue(s):
+The configured application base directory 'd:\student\sem\6 ᥬ\web-application\store\%IIS_DRIVE%\Student\sem\6 ᥬ\web-application' does not exist.  The test directory will be used instead.
+Could not setup the 'd:\student\sem\6 ᥬ\web-application\store\%IIS_DRIVE%\Student\sem\6 ᥬ\web-application\Store\UnitTest' directory for assembly resolution because the directory does not exist.
+Could not setup the 'd:\student\sem\6 ᥬ\web-application\store\%IIS_DRIVE%\Student\sem\6 ᥬ\web-application\Store\Store.Domain' directory for assembly resolution because the directory does not exist.

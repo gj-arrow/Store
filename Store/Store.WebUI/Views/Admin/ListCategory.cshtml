@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Store.Domain.Entities.Category>
+
+@{
+    ViewBag.Title = "Админ панель: список категорий";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="../../Scripts/Script.js"></script>
+<script type="text/javascript" src="../../Scripts/jquery.confirm.js"></script>
+<link rel="stylesheet" type="text/css" href="../../Content/jquery_confirm.css" />
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3>Список категорий</h3>
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped table-condensed table-bordered">
+            <tr>
+                <th>Название</th>
+                <th class="text-center">Действия</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.ActionLink(item.Type, "EditCategory", new { item.CategoryId })</td>
+                    <td class="text-center item">
+                        <div style="float:left">               
+                            @Html.ActionLink("Изменить", "EditCategory", new { item.CategoryId },
+                        new { @class = "btn btn-default btn-xs" })
+                        </div>
+                        <div>
+                            <p class="delete btn btn-default btn-xs" onclick="del(@item.CategoryId)">Удалить</p>  
+                        </div>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+
+    <div class="panel-footer">
+        <div style="float:left; margin-right:10px">    
+            @Html.ActionLink("Добавить категорию", "CreateCategory", null,
+            new { @class = "btn btn-default" })
+        </div>
+
+        <div>
+            @Html.ActionLink("Список товаров", "Index", null,
+            new { @class = "btn btn-default" })
+        </div>
+    </div>
+</div>
+

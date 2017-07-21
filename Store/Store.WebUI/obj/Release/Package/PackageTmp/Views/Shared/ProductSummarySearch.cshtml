@@ -1,0 +1,33 @@
+﻿@model Store.WebUI.Models.SearchProduct
+
+<div class="well col-md-4 col-size" style="padding-top:0px;text-align:center; margin-right:15px">
+    <h3>
+        @Html.ActionLink(@Model.Name, "ViewProduct", new { @Model.ProductId })
+
+    </h3>
+    @if (Model.Picture != null)
+    {
+        <img class="img-thumbnail" style="height:200px"
+             src="../../Images/@Model.Picture" />
+    }
+    <h3>
+        <span class="label">Цена:@Model.Price.ToString() руб</span>
+    </h3>
+
+    <h3 class="label btn-block center" style="font-size:14px">
+        Категория:@Model.Category
+    </h3>
+    @if (User.IsInRole("user") || User.IsInRole("admin"))
+    {
+        using (Html.BeginForm("AddToCart", "Cart"))
+        {
+            @Html.AntiForgeryToken()
+            <div style="margin-top:10px">
+                @Html.HiddenFor(x => x.ProductId)
+                @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+                <input type="submit" class="btn btn-success" value="Добавить в корзину" />
+            </div>
+        }
+    }
+</div>
+

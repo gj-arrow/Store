@@ -1,0 +1,13 @@
+﻿@model Store.Domain.Entities.Cart
+
+
+<div class="navbar-text navbar-right">
+    Товаров: @Model.Lines.Sum(x => x.Quantity),
+    Итого: @Model.ComputeTotalValue().ToString() руб
+</div>
+
+<div class="navbar-right">
+    @Html.ActionLink(" ", "Index", "Cart",
+    new { returnUrl = Request.Url.PathAndQuery },
+    new { @class = "navbar-brand cart" })
+</div>

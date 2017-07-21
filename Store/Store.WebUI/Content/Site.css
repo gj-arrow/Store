@@ -1,0 +1,249 @@
+﻿body {
+    padding-bottom: 20px;
+    /*background-image:url(../Images/4.jpg)*/
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.panel{
+    background-color:unset;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+
+input,
+select,
+textarea {
+    max-width: 300px;
+}
+
+.edit>.form-group>textarea,
+.edit>.form-group>input,
+.edit>.form-group>select{
+    max-width: 550px;
+}
+
+.center{
+text-align:center;
+font-size:17px;
+color:#0d5c30;
+margin-bottom: 15px;
+}
+a:hover {
+color:#428bca;
+text-decoration:none;
+font-weight:bold;
+}
+
+a.btn ,a.btn:hover{
+    font-weight:unset;
+}
+
+td>a {
+color:#0d5c30;
+text-decoration:none;
+font-weight:unset;
+}
+
+td>a:hover {
+color:#428bca;
+text-decoration:none;
+font-weight:unset;
+}
+
+#categories>a.btn-primary:hover{
+    color:#fff;
+}
+
+.navbar-margin {
+margin-left: 30px;
+margin-right: 20px;
+}
+
+.btn-primary {
+color:white;
+}
+
+.navbar-inverse {
+    background-color:#e0e0e0;
+    border-color:#e0e0e0;
+    border-bottom-color:#afafaf;
+}
+
+a.image
+{
+    background: url(../Images/logo.png) no-repeat left;
+    width: 400px;
+    height: 50px;
+    margin-left:37px;
+    text-align: right;
+    padding-top: 17px;
+}
+
+.label{
+color:#333;
+font-weight:unset;
+}
+
+.navbar-inverse .navbar-text{
+color:#0d5c30;
+font-weight:bold;
+}
+
+.col-size{
+    width:31%;
+}
+
+a.cart
+{
+    background: url(../Images/cart.png) no-repeat;
+    width: 50px;
+    height: 50px;
+    margin-right:-15px;
+}
+
+.search {
+    margin-bottom:8px;
+  /* кнопку отправки будем позиционировать абсолютно,
+  ** поэтому необходимо это свойство */
+  position: relative;
+}
+
+.search input {
+  /* отключаем бордюры у инпутов */
+  border: none;
+}
+
+/* стили для поля ввода */
+.search .input {
+  /* растягиваем поле ввода на всю ширину формы */
+  width: 90%;
+
+  /* за счет верхнего (8px) и нижнего (9px) внутренних отступов
+  ** регулируем высоту формы
+  ** внутренний отступ справа (37px) делаем больше левого,
+  ** т.к. там будет размещена кнопка отправки	*/
+  padding: 8px 37px 9px 15px;
+
+  /* чтобы ширина поля ввода (100%) включала в себя внутренние отступы */
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  /* добавляем внутренние тени */
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.1), inset 0 1px 2px rgba(0,0,0,0.3);
+
+  /* закругляем углы */
+  border-radius: 4px;
+
+  background: #fff;
+  font: 13px Tahoma, Arial, sans-serif;
+  color: #555;
+  outline: none;
+}
+
+.search .input:hover,.search .input:focus{
+  box-shadow: inset 0 0 5px rgb(21, 152, 21), inset 0 1px 2px rgba(0,0,0,0.3);
+  background: #fff;
+  color: #333;
+}
+
+/* оформляем кнопку отправки */
+.search .submit {
+  /* позиционируем кнопку абсолютно от правого края формы */
+  position: absolute;
+  top: 0;
+  width: 20px;
+
+  /* растягиваем кнопку на всю высоту формы */
+  height: 100%;
+
+  cursor: pointer;
+  background: url(../Images/search.png) 50% no-repeat;
+
+  /* добавляем прозрачность кнопке отправки */
+  opacity: 0.5;
+}
+
+/* при наведении курсора меняем прозрачность кнопки отправки */
+.search .submit:hover {
+  opacity: 0.8;
+}
+
+/* данное свойство необходимо для того, чтобы в браузерах
+** Chrome и Safari можно было стилизовать инпуты */
+input[type="search"] {
+  -webkit-appearance: none;
+}
+
+.size79percent {
+    width: 79%;
+}
+
+.pages{
+    position: absolute;
+    bottom: -39px;
+    right: 15px;
+    margin-right:42px
+}
+
+h3,h3>a,.navbar-inverse .navbar-nav>li>a{
+color:#0d5c30;
+font-weight:bold;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover,.navbar-inverse .navbar-nav>li>a:focus{
+    color:#428bca;
+}
+
+a.cart:hover{
+    background-size: contain;
+}
+
+.navbar-inverse>h4 {
+    padding-top: 16px;
+    color: #428bca;
+    margin-top:unset;
+    margin-bottom: unset;
+    font-weight:bold;
+}
+
+@-webkit-keyframes pulsate {
+ 50% { color: #2dbd00; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff; }
+}
+@keyframes pulsate {
+ 50% { color: #2dbd00; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff; }
+}
+#blink7 {
+    text-shadow: 0 -1px rgba(0,0,0,.1);
+    -webkit-animation: pulsate 1.2s linear infinite;
+    animation: pulsate 1.2s linear infinite;
+}
+.my-alert{
+    font-weight:bold;
+    margin-top:-20px;
+    text-align:center;
+}
+
+.sort {
+    background-color: #f5f5f5;
+    height: 30px;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    width:95.7%;
+    margin-bottom: 10px;
+}
+.sort p > a {
+    text-decoration:underline;
+}
+
+.marg-right {
+    margin-right: 20px;
+}
+
+#block:hover{
+    border: 1px solid #5cb85c;
+    border-radius: 4px;
+}

@@ -1,0 +1,19 @@
+﻿@model Store.WebUI.Models.SelectCategory
+
+<div class="form-group">
+    <label>Список категорий:</label>
+    <select class="form-control" id="category" name="list_category">
+    <option selected value="default">Выберите категорию</option>
+    @foreach (var link in Model.Categories)
+    {
+        if (link == Model.input_category)
+        {
+             <option  selected value="@link">@link</option>
+        }
+        else
+        {
+          <option value="@link">@link</option>
+        }
+    }
+</select>
+</div>

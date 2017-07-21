@@ -1,0 +1,29 @@
+﻿@model Store.WebUI.Models.IndexViewModel
+@{
+    ViewBag.Title = "Управление";
+}
+<h2>@ViewBag.Title</h2>
+
+<p class="text-success">@ViewBag.StatusMessage</p>
+<div>
+    <h4>Настройка аккаунта</h4>
+    <hr />
+            @*@if (Model.HasPassword)
+            {
+                @Html.ActionLink("Смена пароля", "ChangePassword", null, new { @class = "btn btn-default" })
+            }
+            else
+            {
+                @Html.ActionLink("Создать", "SetPassword", null, new { @class = "btn btn-default" })
+            }*@
+
+    @if (User.IsInRole("admin"))
+    {
+     <div style="float:left; margin-right:20px">
+         @Html.ActionLink("Настройка контента", "Index", "Admin", null, new { @class = "btn btn-default" })
+    </div>
+    <div>
+        @Html.ActionLink("Удаление пользователей", "ListUsers", "Admin", null, new { @class = "btn btn-default" })
+    </div>
+    }
+</div>

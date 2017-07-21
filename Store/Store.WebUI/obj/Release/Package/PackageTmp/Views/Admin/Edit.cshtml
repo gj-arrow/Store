@@ -1,0 +1,95 @@
+﻿@model Store.Domain.Entities.Product
+
+@{
+    ViewBag.Title = "Админ панель: редактирование товара";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div>
+    <div class="panel-heading">
+        <h3>Редактирование товара @Model.Name</h3>
+    </div>
+
+    @using (Html.BeginForm("Edit", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary()
+
+        <div class="panel-body edit">
+            @Html.HiddenFor(m => m.ProductId)
+            @Html.HiddenFor(p => p.Picture, new { @id = "upload-file-info" })
+
+                <div class="form-group" style="height: 65px;">
+                    @Html.LabelFor(n => n.Name, new { @class = "control-label" })
+                    @Html.TextBoxFor(n => n.Name, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(n => n.Name, "", new { @class = "text-danger" })
+                </div>
+
+            <div class="form-group" style="height: 65px; margin-bottom:150px">
+                @Html.LabelFor(n => n.Description, new { @class = "control-label" }) 
+                @Html.TextAreaFor(n => n.Description, new { @class = "form-control" , rows = 8})
+                @Html.ValidationMessageFor(n => n.Description, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group" style="height: 65px;">
+                @Html.LabelFor(n => n.Price, new { @class = "control-label" })
+                @Html.TextBoxFor(n => n.Price, new { @class = "form-control" })
+                @Html.ValidationMessageFor(n => n.Price, "", new { @class = "text-danger" })
+            </div>
+         
+            @if (Model.Category == null)
+            {
+                @Html.Action("CategorySection", "Admin")
+            }
+            else
+            {
+                @Html.Action("CategorySection", "Admin", new { input_category = Model.Category.Type })
+            } 
+
+        <input type="hidden" id="cat" name="input_category">
+                          
+            <div class="form-group">
+                <div style="position:relative;">
+                    <label>Картинка</label>
+                    <a class='btn' href='javascript:;'>
+                        Выберите файл...
+                        <input type="file" name="Image" size="40"
+                               style="position:absolute;z-index:2;top:0;
+                                left:0;filter: alpha(opacity=0); opacity:0;
+                                background-color:transparent;color:transparent;"
+                               onchange='$("#upload-file-info").val("../../Images/" + $(this).val().split("\\").pop());imgsrc()'>
+                    </a>
+                </div>
+                <div style="height:152px;width:192px;border: 1px solid #ddd;" >
+                    <img id="currentPicture" style="height:150px;width:190px;float:left;"
+                         src="@Model.Picture"/>
+                <img id="image" style="height:50px;position: absolute;margin-top: 50px;"/> 
+                    </div>              
+            </div>
+            <div>
+                <input type="submit" id="func" value="Сохранить" class="btn btn-primary" />
+                @Html.ActionLink("Отменить изменения и вернуться к списку", "Index", 
+               null, new { @class = "btn btn-default"})
+            </div>
+        </div>
+    }
+</div>
+
+<script>
+    $('#func').click(
+    function () {
+         $('#cat').val($('#category').val());
+        
+    });
+
+    function imgsrc() {
+        var image = document.getElementById("image");
+        image.src = "../../Images/galka.png";
+        var image_current = document.getElementById("currentPicture");
+        var path_image = document.getElementById("upload-file-info").value;
+        if (path_image == "../../Images/")
+            image_current.src = "../../Images/no_image.png";
+        else
+            image_current.src = path_image;
+    }
+    
+</script>

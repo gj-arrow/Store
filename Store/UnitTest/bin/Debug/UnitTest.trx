@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="2fa36a9e-6a86-4a5f-bde1-f4a34a602446" name="user@DESKTOP-ALU9E0R 2017-04-17 16:38:06" runUser="DESKTOP-ALU9E0R\user" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="TestSettings1" id="f4fb6ec3-e717-4d1a-a78d-b7ca65a9cf95">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment userDeploymentRoot="D:\Student\sem\6 сем\web-application\Store\UnitTest\bin\Debug" useDefaultDeploymentRoot="false" enabled="false" runDeploymentRoot="user_DESKTOP-ALU9E0R 2017-04-17 16_38_06" />
+    <Execution>
+      <TestTypeSpecific>
+        <UnitTestRunConfig testTypeId="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b">
+          <AssemblyResolution applicationBaseDirectory="%IIS_DRIVE%\Student\sem\6 сем\web-application">
+            <TestDirectory useLoadContext="true" />
+            <RuntimeResolution>
+              <Directory path="%IIS_DRIVE%\Student\sem\6 сем\web-application\Store\UnitTest" includeSubDirectories="true" />
+              <Directory path="%IIS_DRIVE%\Student\sem\6 сем\web-application\Store\Store.Domain" includeSubDirectories="true" />
+            </RuntimeResolution>
+          </AssemblyResolution>
+        </UnitTestRunConfig>
+      </TestTypeSpecific>
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+    <Properties />
+  </TestSettings>
+  <Times creation="2017-04-17T16:38:06.4907849+03:00" queuing="2017-04-17T16:38:07.3308424+03:00" start="2017-04-17T16:38:07.4708345+03:00" finish="2017-04-17T16:38:08.5409060+03:00" />
+  <ResultSummary outcome="Warning">
+    <Counters total="16" executed="16" passed="16" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="DESKTOP-ALU9E0R" outcome="Warning" timestamp="2017-04-17T16:38:07.7108487+03:00">
+        <Text>The configured application base directory 'd:\student\sem\6 сем\web-application\store\%IIS_DRIVE%\Student\sem\6 сем\web-application' does not exist.  The test directory will be used instead.</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-ALU9E0R" outcome="Warning" timestamp="2017-04-17T16:38:07.8309070+03:00">
+        <Text>Could not setup the 'd:\student\sem\6 сем\web-application\store\%IIS_DRIVE%\Student\sem\6 сем\web-application\Store\UnitTest' directory for assembly resolution because the directory does not exist.</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-ALU9E0R" outcome="Warning" timestamp="2017-04-17T16:38:07.8309070+03:00">
+        <Text>Could not setup the 'd:\student\sem\6 сем\web-application\store\%IIS_DRIVE%\Student\sem\6 сем\web-application\Store\Store.Domain' directory for assembly resolution because the directory does not exist.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="List1" storage="d:\student\sem\6 сем\web-application\store\unittest\bin\debug\unittest.dll" id="32bd2f37-7637-dfa0-3869-df6b34e2d359">
+      <Execution id="5650b6e3-047a-4f5d-bc82-c1150339a3ea" />
+      <TestMethod codeBase="D:/Student/sem/6 сем/web-application/Store/UnitTest/bin/Debug/UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="UnitTest.AdminTests, UnitTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="List1" />
+    </UnitTest>
+    <UnitTest name="Edit2" storage="d:\student\sem\6 сем\web-application\store\unittest\bin\debug\unittest.dll" id="074757b0-cf5b-a717-91f8-2cb9026cb06a">
+      <Execution id="f9e5238c-11e3-42f5-9d93-d67f9a5bcc97" />
+      <TestMethod codeBase="D:/Student/sem/6 сем/web-application/Store/UnitTest/bin/Debug/UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="UnitTest.AdminTests, UnitTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Edit2" />
+    </UnitTest>
+    <UnitTest name="CreateCategory2" storage="d:\student\sem\6 сем\web-application\store\unittest\bin\debug\unittest.dll" id="21176f59-eba7-9a9e-21b0-7737c9caf8d6">
+      <Execution id="ca8aa99b-f19c-49b1-a889-d6d896f9313f" />
+      <TestMethod codeBase="D:/Student/sem/6 сем/web-application/Store/UnitTest/bin/Debug/UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="UnitTest.AdminTests, UnitTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateCategory2" />
+    </UnitTest>
+    <UnitTest name="List2" storage="d:\student\sem\6 сем\web-application\store\unittest\bin\debug\unittest.dll" id="2ae708a1-61e4-9518-60b0-9bb2ba3604b0">
+      <Execution id="50dfaf98-a6a8-4b85-b9b4-03fc39118c2f" />
+      <TestMethod codeBase="D:/Student/sem/6 сем/web-application/Store/UnitTest/bin/Debug/UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="UnitTest.AdminTests, UnitTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="List2" />
+    </UnitTest>
+    <UnitTest name="Edit3" storage="d:\student\sem\6 сем\web-application\store\unittest\bin\debug\unittest.dll" id="c7c24bd8-1f58-70b2-cb31-9bd0a8c4f9b1">
+      <Execution id="34771164-4639-4916-9595-7b9a2c3acc2e" />
+      <TestMethod codeBase="D:/Student/sem/6 сем/web-application/Store/UnitTest/bin/Debug/UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="UnitTest.AdminTests, UnitTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Edit3" />
+    </UnitTest>
+    <UnitTest name="CreateCategory1" storage="d:\student\sem\6 сем\web-application\store\unittest\bin\debug\unittest.dll" id="886877b9-01ad-6d75-da6a-78488f5efffc">
+      <Execution id="45483b05-c48f-44f9-82c6-04a6b59c56b0" />
+      <TestMethod codeBase="D:/Student/sem/6 сем/web-application/Store/UnitTest/bin/Debug/UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="UnitTest.AdminTests, UnitTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateCategory1" />
+    </UnitTest>
+    <UnitTest name="Edit5" storage="d:\student\sem\6 сем\web-application\store\unittest\bin\debug\unittest.dll" id="3f1a4a33-ea12-aa2a-e1db-cd9336a5a065">
+      <Execution id="b5699aba-eebc-428d-8bf5-327e0014d60f" />
+      <TestMethod codeBase="D:/Student/sem/6 сем/web-application/Store/UnitTest/bin/Debug/UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="UnitTest.AdminTests, UnitTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Edit5" />
+    </UnitTest>
+    <UnitTest name="Add_To_Cart2" storage="d:\student\sem\6 сем\web-application\store\unittest\bin\debug\unittest.dll" id="13bd4f7b-1942-e403-7a82-5593700892aa">
+      <Execution id="dcbdf8f2-c0d8-4c1c-a5f1-56d2a7bd6a1d" />
+      <TestMethod codeBase="D:/Student/sem/6 сем/web-application/Store/UnitTest/bin/Debug/UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="UnitTest.CartTests, UnitTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Add_To_Cart2" />
+    </UnitTest>
+    <UnitTest name="Add_To_Cart" storage="d:\student\sem\6 сем\web-application\store\unittest\bin\debug\unittest.dll" id="58af5040-9259-ad76-b36a-bdbc8729c2ac">
+      <Execution id="bafbd94a-10f4-4c13-a98f-7f860b064a27" />
+      <TestMethod codeBase="D:/Student/sem/6 сем/web-application/Store/UnitTest/bin/Debug/UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="UnitTest.CartTests, UnitTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Add_To_Cart" />
+    </UnitTest>
+    <UnitTest name="Edit1" storage="d:\student\sem\6 сем\web-application\store\unittest\bin\debug\unittest.dll" id="3211495e-8fb8-0c80-5604-029077b0cef7">
+      <Execution id="8bc956f0-20f1-4af7-92fb-07d871795aa6" />
+      <TestMethod codeBase="D:/Student/sem/6 сем/web-application/Store/UnitTest/bin/Debug/UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="UnitTest.AdminTests, UnitTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Edit1" />
+    </UnitTest>
+    <UnitTest name="List3" storage="d:\student\sem\6 сем\web-application\store\unittest\bin\debug\unittest.dll" id="2e805d0a-60c8-e82f-3403-10aa16ffffc1">
+      <Execution id="9cf1bbab-c572-43bf-b765-fe0c0ff88d36" />
+      <TestMethod codeBase="D:/Student/sem/6 сем/web-application/Store/UnitTest/bin/Debug/UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="UnitTest.AdminTests, UnitTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="List3" />
+    </UnitTest>
+    <UnitTest name="CreateCategory3" storage="d:\student\sem\6 сем\web-application\store\unittest\bin\debug\unittest.dll" id="9bb78dcd-e02e-2889-f311-4baf04c3501a">
+      <Execution id="b9446872-dfd9-4e83-946f-d28c856a12b1" />
+      <TestMethod codeBase="D:/Student/sem/6 сем/web-application/Store/UnitTest/bin/Debug/UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="UnitTest.AdminTests, UnitTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateCategory3" />
+    </UnitTest>
+    <UnitTest name="Edit4" storage="d:\student\sem\6 сем\web-application\store\unittest\bin\debug\unittest.dll" id="ea786074-8066-fe0b-668b-224303b4a471">
+      <Execution id="02b6f956-4642-45d1-a83a-5381f76e8b04" />
+      <TestMethod codeBase="D:/Student/sem/6 сем/web-application/Store/UnitTest/bin/Debug/UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="UnitTest.AdminTests, UnitTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Edit4" />
+    </UnitTest>
+    <UnitTest name="DeleteCategory3" storage="d:\student\sem\6 сем\web-application\store\unittest\bin\debug\unittest.dll" id="83f03e7c-b60c-25ee-05be-e5c2433d9b7c">
+      <Execution id="5c077f74-59d7-4865-9b82-cd976eb16f98" />
+      <TestMethod codeBase="D:/Student/sem/6 сем/web-application/Store/UnitTest/bin/Debug/UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="UnitTest.AdminTests, UnitTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DeleteCategory3" />
+    </UnitTest>
+    <UnitTest name="DeleteCategory1" storage="d:\student\sem\6 сем\web-application\store\unittest\bin\debug\unittest.dll" id="7ff5a9ab-4d7d-c0ae-508f-7cb4faa1faa0">
+      <Execution id="46bff4aa-91e9-43f7-8803-be555ce0236a" />
+      <TestMethod codeBase="D:/Student/sem/6 сем/web-application/Store/UnitTest/bin/Debug/UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="UnitTest.AdminTests, UnitTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DeleteCategory1" />
+    </UnitTest>
+    <UnitTest name="DeleteCategory2" storage="d:\student\sem\6 сем\web-application\store\unittest\bin\debug\unittest.dll" id="43452c57-6efc-3156-516a-0ca9b8af4911">
+      <Execution id="07a5a53c-1a81-4de6-a342-2c7757abbcc4" />
+      <TestMethod codeBase="D:/Student/sem/6 сем/web-application/Store/UnitTest/bin/Debug/UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="UnitTest.AdminTests, UnitTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DeleteCategory2" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="886877b9-01ad-6d75-da6a-78488f5efffc" executionId="45483b05-c48f-44f9-82c6-04a6b59c56b0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="21176f59-eba7-9a9e-21b0-7737c9caf8d6" executionId="ca8aa99b-f19c-49b1-a889-d6d896f9313f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9bb78dcd-e02e-2889-f311-4baf04c3501a" executionId="b9446872-dfd9-4e83-946f-d28c856a12b1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7ff5a9ab-4d7d-c0ae-508f-7cb4faa1faa0" executionId="46bff4aa-91e9-43f7-8803-be555ce0236a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="43452c57-6efc-3156-516a-0ca9b8af4911" executionId="07a5a53c-1a81-4de6-a342-2c7757abbcc4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="83f03e7c-b60c-25ee-05be-e5c2433d9b7c" executionId="5c077f74-59d7-4865-9b82-cd976eb16f98" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3211495e-8fb8-0c80-5604-029077b0cef7" executionId="8bc956f0-20f1-4af7-92fb-07d871795aa6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="074757b0-cf5b-a717-91f8-2cb9026cb06a" executionId="f9e5238c-11e3-42f5-9d93-d67f9a5bcc97" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c7c24bd8-1f58-70b2-cb31-9bd0a8c4f9b1" executionId="34771164-4639-4916-9595-7b9a2c3acc2e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ea786074-8066-fe0b-668b-224303b4a471" executionId="02b6f956-4642-45d1-a83a-5381f76e8b04" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3f1a4a33-ea12-aa2a-e1db-cd9336a5a065" executionId="b5699aba-eebc-428d-8bf5-327e0014d60f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="32bd2f37-7637-dfa0-3869-df6b34e2d359" executionId="5650b6e3-047a-4f5d-bc82-c1150339a3ea" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2ae708a1-61e4-9518-60b0-9bb2ba3604b0" executionId="50dfaf98-a6a8-4b85-b9b4-03fc39118c2f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2e805d0a-60c8-e82f-3403-10aa16ffffc1" executionId="9cf1bbab-c572-43bf-b765-fe0c0ff88d36" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="58af5040-9259-ad76-b36a-bdbc8729c2ac" executionId="bafbd94a-10f4-4c13-a98f-7f860b064a27" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="13bd4f7b-1942-e403-7a82-5593700892aa" executionId="dcbdf8f2-c0d8-4c1c-a5f1-56d2a7bd6a1d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="45483b05-c48f-44f9-82c6-04a6b59c56b0" testId="886877b9-01ad-6d75-da6a-78488f5efffc" testName="CreateCategory1" computerName="DESKTOP-ALU9E0R" duration="00:00:00.1780874" startTime="2017-04-17T16:38:07.6908499+03:00" endTime="2017-04-17T16:38:08.4009165+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="45483b05-c48f-44f9-82c6-04a6b59c56b0">
+    </UnitTestResult>
+    <UnitTestResult executionId="ca8aa99b-f19c-49b1-a889-d6d896f9313f" testId="21176f59-eba7-9a9e-21b0-7737c9caf8d6" testName="CreateCategory2" computerName="DESKTOP-ALU9E0R" duration="00:00:00.0147224" startTime="2017-04-17T16:38:08.4009165+03:00" endTime="2017-04-17T16:38:08.4208999+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ca8aa99b-f19c-49b1-a889-d6d896f9313f">
+    </UnitTestResult>
+    <UnitTestResult executionId="b9446872-dfd9-4e83-946f-d28c856a12b1" testId="9bb78dcd-e02e-2889-f311-4baf04c3501a" testName="CreateCategory3" computerName="DESKTOP-ALU9E0R" duration="00:00:00.0015006" startTime="2017-04-17T16:38:08.4208999+03:00" endTime="2017-04-17T16:38:08.4208999+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b9446872-dfd9-4e83-946f-d28c856a12b1">
+    </UnitTestResult>
+    <UnitTestResult executionId="46bff4aa-91e9-43f7-8803-be555ce0236a" testId="7ff5a9ab-4d7d-c0ae-508f-7cb4faa1faa0" testName="DeleteCategory1" computerName="DESKTOP-ALU9E0R" duration="00:00:00.0031381" startTime="2017-04-17T16:38:08.4208999+03:00" endTime="2017-04-17T16:38:08.4309006+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="46bff4aa-91e9-43f7-8803-be555ce0236a">
+    </UnitTestResult>
+    <UnitTestResult executionId="07a5a53c-1a81-4de6-a342-2c7757abbcc4" testId="43452c57-6efc-3156-516a-0ca9b8af4911" testName="DeleteCategory2" computerName="DESKTOP-ALU9E0R" duration="00:00:00.0015895" startTime="2017-04-17T16:38:08.4309006+03:00" endTime="2017-04-17T16:38:08.4309006+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="07a5a53c-1a81-4de6-a342-2c7757abbcc4">
+    </UnitTestResult>
+    <UnitTestResult executionId="5c077f74-59d7-4865-9b82-cd976eb16f98" testId="83f03e7c-b60c-25ee-05be-e5c2433d9b7c" testName="DeleteCategory3" computerName="DESKTOP-ALU9E0R" duration="00:00:00.0022109" startTime="2017-04-17T16:38:08.4309006+03:00" endTime="2017-04-17T16:38:08.4509028+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5c077f74-59d7-4865-9b82-cd976eb16f98">
+    </UnitTestResult>
+    <UnitTestResult executionId="8bc956f0-20f1-4af7-92fb-07d871795aa6" testId="3211495e-8fb8-0c80-5604-029077b0cef7" testName="Edit1" computerName="DESKTOP-ALU9E0R" duration="00:00:00.0029965" startTime="2017-04-17T16:38:08.4509028+03:00" endTime="2017-04-17T16:38:08.4509028+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8bc956f0-20f1-4af7-92fb-07d871795aa6">
+    </UnitTestResult>
+    <UnitTestResult executionId="f9e5238c-11e3-42f5-9d93-d67f9a5bcc97" testId="074757b0-cf5b-a717-91f8-2cb9026cb06a" testName="Edit2" computerName="DESKTOP-ALU9E0R" duration="00:00:00.0019073" startTime="2017-04-17T16:38:08.4609005+03:00" endTime="2017-04-17T16:38:08.4609005+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f9e5238c-11e3-42f5-9d93-d67f9a5bcc97">
+    </UnitTestResult>
+    <UnitTestResult executionId="34771164-4639-4916-9595-7b9a2c3acc2e" testId="c7c24bd8-1f58-70b2-cb31-9bd0a8c4f9b1" testName="Edit3" computerName="DESKTOP-ALU9E0R" duration="00:00:00.0014878" startTime="2017-04-17T16:38:08.4609005+03:00" endTime="2017-04-17T16:38:08.4609005+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="34771164-4639-4916-9595-7b9a2c3acc2e">
+    </UnitTestResult>
+    <UnitTestResult executionId="02b6f956-4642-45d1-a83a-5381f76e8b04" testId="ea786074-8066-fe0b-668b-224303b4a471" testName="Edit4" computerName="DESKTOP-ALU9E0R" duration="00:00:00.0017054" startTime="2017-04-17T16:38:08.4609005+03:00" endTime="2017-04-17T16:38:08.4709012+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="02b6f956-4642-45d1-a83a-5381f76e8b04">
+    </UnitTestResult>
+    <UnitTestResult executionId="b5699aba-eebc-428d-8bf5-327e0014d60f" testId="3f1a4a33-ea12-aa2a-e1db-cd9336a5a065" testName="Edit5" computerName="DESKTOP-ALU9E0R" duration="00:00:00.0013997" startTime="2017-04-17T16:38:08.4709012+03:00" endTime="2017-04-17T16:38:08.4709012+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b5699aba-eebc-428d-8bf5-327e0014d60f">
+    </UnitTestResult>
+    <UnitTestResult executionId="5650b6e3-047a-4f5d-bc82-c1150339a3ea" testId="32bd2f37-7637-dfa0-3869-df6b34e2d359" testName="List1" computerName="DESKTOP-ALU9E0R" duration="00:00:00.0057823" startTime="2017-04-17T16:38:08.4709012+03:00" endTime="2017-04-17T16:38:08.4809207+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5650b6e3-047a-4f5d-bc82-c1150339a3ea">
+    </UnitTestResult>
+    <UnitTestResult executionId="50dfaf98-a6a8-4b85-b9b4-03fc39118c2f" testId="2ae708a1-61e4-9518-60b0-9bb2ba3604b0" testName="List2" computerName="DESKTOP-ALU9E0R" duration="00:00:00.0028370" startTime="2017-04-17T16:38:08.4809207+03:00" endTime="2017-04-17T16:38:08.4809207+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="50dfaf98-a6a8-4b85-b9b4-03fc39118c2f">
+    </UnitTestResult>
+    <UnitTestResult executionId="9cf1bbab-c572-43bf-b765-fe0c0ff88d36" testId="2e805d0a-60c8-e82f-3403-10aa16ffffc1" testName="List3" computerName="DESKTOP-ALU9E0R" duration="00:00:00.0014886" startTime="2017-04-17T16:38:08.4909017+03:00" endTime="2017-04-17T16:38:08.4909017+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9cf1bbab-c572-43bf-b765-fe0c0ff88d36">
+    </UnitTestResult>
+    <UnitTestResult executionId="bafbd94a-10f4-4c13-a98f-7f860b064a27" testId="58af5040-9259-ad76-b36a-bdbc8729c2ac" testName="Add_To_Cart" computerName="DESKTOP-ALU9E0R" duration="00:00:00.0068672" startTime="2017-04-17T16:38:08.4909017+03:00" endTime="2017-04-17T16:38:08.5009233+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bafbd94a-10f4-4c13-a98f-7f860b064a27">
+    </UnitTestResult>
+    <UnitTestResult executionId="dcbdf8f2-c0d8-4c1c-a5f1-56d2a7bd6a1d" testId="13bd4f7b-1942-e403-7a82-5593700892aa" testName="Add_To_Cart2" computerName="DESKTOP-ALU9E0R" duration="00:00:00.0007595" startTime="2017-04-17T16:38:08.5009233+03:00" endTime="2017-04-17T16:38:08.5009233+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dcbdf8f2-c0d8-4c1c-a5f1-56d2a7bd6a1d">
+    </UnitTestResult>
+  </Results>
+</TestRun>
